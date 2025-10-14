@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color: hsl(47, 88%, 63%);
+  --boColor: hsl(0, 0%, 7%);
+  --bxColor: hsl(0, 0%, 100%);
+  --bo-radisu: 1em;
+}
+
+body {
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Figtree, outfit, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 23vw;
+  height: auto;
+  border: var(--boColor) solid 1px;
+  border-radius: var(--bo-radisu);
+  background-color: var(--bxColor);
+  margin-top: 4em;
+  padding: 1em;
+  box-shadow: 8px 6px 0px 0px var(--boColor);
+
+}
+
+.container .img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.para {
+  width: 4em;
+  margin-top: 1rem;
+  padding: 0.4em;
+  background-color: var(--color);
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.date {
+  margin-top: 1em;
+}
+
+h1 {
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+}
+
+h1:hover{
+  color: var(--color);
+  cursor: pointer;
+}
+
+.text {
+  font-size: 1rem;
+  color: hsl(0, 0%, 42%);
+  margin-top: 1em;
+}
+
+.user {
+  margin-top: 1em;
+  width: 2em;
+}
+
+.userName {
+  font-weight: bold;
+  position: relative;
+  top: -0.8em;
+  padding: 0.3em;
+}
+
+@media screen and (max-width: 30em) {
+  body {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    margin:-1.2em;
+    margin-top: 3em;
+  }
+}
