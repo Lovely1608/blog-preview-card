@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -13,6 +13,7 @@
 }
 
 body {
+  min-height: 100svh; /* to centerthe card vertically use this min-height 100svh */
   background-color: var(--color);
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 23vw;
+   max-width: 20rem; /*feedback on width property: I rearely need to to set specific withds. use the max0width with rem instead of width with vw */
   height: auto;
   border: var(--boColor) solid 1px;
   border-radius: var(--bo-radisu);
@@ -31,17 +32,16 @@ body {
   margin-top: 4em;
   padding: 1em;
   box-shadow: 8px 6px 0px 0px var(--boColor);
-
 }
 
-.container .img {
+.container .illustration {
   width: 100%;
   height: auto;
   border-radius: 0.5em;
 }
 
 .para {
-  width: 4em;
+  display: inline-block; /* feedback: avoid using with and use display with block-inline property */
   margin-top: 1rem;
   padding: 0.4em;
   background-color: var(--color);
@@ -58,7 +58,12 @@ h1 {
   font-size: 1.5rem;
 }
 
-h1:hover{
+h1 > a {
+  color: var(--boColor);
+  text-decoration: none;
+}
+
+h1:hover {
   color: var(--color);
   cursor: pointer;
 }
@@ -69,16 +74,19 @@ h1:hover{
   margin-top: 1em;
 }
 
-.user {
-  margin-top: 1em;
+.footer{  /*feedback : gap and display propertt used here */
+  padding-top: 1rem ;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author {
   width: 2em;
 }
 
 .userName {
   font-weight: bold;
-  position: relative;
-  top: -0.8em;
-  padding: 0.3em;
 }
 
 @media screen and (max-width: 30em) {
@@ -89,7 +97,6 @@ h1:hover{
 
   .container {
     width: 100%;
-    margin:-1.2em;
-    margin-top: 3em;
+    margin: -1.2em;
   }
 }
