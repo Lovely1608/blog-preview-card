@@ -17,22 +17,26 @@
       <div class="container">
         <img
           src="blogImage.png"
-          alt="visit frontened mentor for this image"
-          class="img"
-        />
+          alt=""
+          class="illustration"
+        /><!--Decorative  images should be given an empty alt text : alt=""  -->
 
-        <p class="para">learning</p>
-        <p class="date">Published 13 sep 2025</p>
-        <h1>HTML & CSS foundations</h1>
+        <p class="para">Learning</p>
+        <!-- feedback: try to wrap the date in a time element  -->
+        <p class="date">
+          Published <time datetime="2025-10-13"></time>13 oct 2025
+        </p>
+        <!-- heading <h1> needs a link inside -->
+        <h1><a href="">HTML & CSS foundations</a></h1>
 
         <p class="text">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
-
-          <img src="image-avatar.webp" alt="pic" class="user" />
+        <div class="footer">  <!--feedback: avoid useing position absolute and wrao  umy img and p in one dive and then style-->
+          <img src="image-avatar.webp" alt="author" class="author" />
           <span class="userName">Greg Hooper</span>
-
+        </div>
       </div>
     </main>
   </body>
